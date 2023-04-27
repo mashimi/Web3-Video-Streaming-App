@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
+        <link href="assets/images/favicon.ico" rel="icon" />
+        <title>Documentation | Streamlify - Video Streaming App</title>
+        <meta
+            name="description"
+            content="Streamlify is a Web3 Video Streaming App build on top of the Ethereum blockchain"
+        />
+        <meta name="author" content="web3monkeys.com" />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+        <!-- Highlight Syntax -->
+        <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/atom-one-dark.css" />
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="assets/css/color-red.css" />
+    </head>
+
+    <body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- Preloader End -->
+
+        <!--  ----------------------------------------------- 
+              MAIN WRAPPER
+        -----------------------------------------------  -->
+        <div id="main-wrapper">
+            <!--  ----------------------------------------------- 
+                    NAVBAR
+            -----------------------------------------------  -->
+            <header id="header" class="sticky-top">
+                <!-- Navbar -->
+                <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+                    <div class="container-fluid">
+                        <!-- Sidebar Toggler -->
+                        <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button">
+                            <span></span><span class="w-75"></span><span class="w-50"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <a class="logo ml-md-3" href="index.html" title="Streamlify">
+                            <img src="assets/images/logo.svg" alt="Streamlify" width="125" />
+                        </a>
+                        <span class="text-2 ml-2">v1.0</span>
+                        <!-- Logo End -->
+
+                        <!-- Navbar Toggler -->
+                        <button
+                            class="navbar-toggler ml-auto"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#header-nav"
+                        >
+                            <span></span><span></span><span></span>
+                        </button>
+
+                        <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+                            <ul class="navbar-nav">
+                                <li>
+                                    <a class="text-white" target="_blank" href="">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-white" target="_blank" href="">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+                            <li class="social-icons-website">
+                                <a
+                                    data-toggle="tooltip"
+                                    href="http://www.web3monkeys.com"
+                                    target="_blank"
+                                    title=""
+                                    data-original-title="Our Website"
+                                    ><i class="fas fa-globe-americas text-white"></i
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Navbar End -->
+            </header>
+            <!-- Header End -->
+
+            <!--  ----------------------------------------------- 
+                    CONTENT
+             -----------------------------------------------  -->
+            <div id="content" role="main">
+                <!--  ----------------------------------------------- 
+                    SIDEBAR NAVIGATION
+                -----------------------------------------------  -->
+                <div class="idocs-navigation">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#getting_stated">Getting Started</a>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-light" href="#introduction">Introduction</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-light" href="#requirements">Requirements</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#app_configs">App Configurations</a>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-light" href="#react_configs">Site Identity</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-light" href="#app_configs">Web3 Configs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-light" href="#profits_percentage"
+                                        >Profits Percentage</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-light" href="#truffle_configs">Truffle Configs</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#react_installation">Installation</a>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-light" href="#react_installation">React</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-light" href="#laravel_installation">Laravel</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#development">Development</a>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#development">Ganach Local Server</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#deployment">Depolyment</a>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#deployment">Smart Contracts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#faqs">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#source_credits">Source & Credits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#changelog">Changelog</a>
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--  ----------------------------------------------- 
+                    CONTENT
+                -----------------------------------------------  -->
+                <div class="idocs-content">
+                    <div class="container-fluid">
+                        <!--  ----------------------------------------------- 
+                              GETTING STARTED
+                         -----------------------------------------------  -->
+                        <section id="getting_stated">
+                            <h1>Documentation</h1>
+                            <h2>Streamlify | Web3 Video Streaming App</h2>
+                            <p class="lead">Thank you so much for purchasing our item from CodeCanyon.</p>
+                            <hr />
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-4">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Version:</strong> 1.0</li>
+                                        <li>
+                                            <strong>Author:</strong>
+                                            <a href="https://web3monkeys.com/" target="_blank">Web3 Monkeys</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <ul class="list-unstyled">
+                                        <li><strong class="font-weight-700">Created:</strong> 1 Jan, 2023</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="alert alert-info">
+                                If you have any questions that are beyond the scope of this help file, Please feel free
+                                to email via
+                                <a target="_blank" href="">Item Support Page</a>.
+                            </p>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              INTRODUCTION
+                         -----------------------------------------------  -->
+                        <section id="introduction">
+                            <h2>Introduction</h2>
+                            <p class="text-muted" style="font-size: 1.1rem">
+                                <strong class="text-white">Streamlify</strong> is a Web3 video streaming app, suitable
+                                for movies, videos, reviews and streaming. The app allows users to host their videos on
+                                the Blockchain and deal with them using CryptoCurrency. The app holders can gain profits
+                                from <strong class="fw-bold">Streamlify</strong> by cutting a precentage of the
+                                blockchain transactions running on this app for themseleves. It's built on the Ethereum
+                                Blockchain and supports MetaMask wallet.
+                            </p>
+                            <p class="text-muted" style="font-size: 1.1rem">
+                                The app was build within an approach to simplify the end user experience of the Web3
+                                apps. It is running perfectly on all viewports, the end user will not suffer from the
+                                usual hassles of the Web3 apps. As a user, no need to go into complicated steps to be a
+                                part of your app.
+                            </p>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              REQUIREMENTS
+                         -----------------------------------------------  -->
+                        <section id="requirements">
+                            <h2>Requirements</h2>
+                            <h5>For Customization:</h5>
+                            <ol>
+                                <li>
+                                    Basic React.js knowledge for Front End customization.
+                                    <a href="https://reactjs.org/docs/getting-started.html" target="_blank"
+                                        >visit React docs</a
+                                    >
+                                </li>
+                                <li>
+                                    Basic Bootstrap knowledge for UI Customization.
+                                    <a href="https://getbootstrap.com/" target="_blank">visit Bootstrap docs</a>
+                                </li>
+                            </ol>
+
+                            <h5>For Deployment & Development:</h5>
+                            <ol>
+                                <li>
+                                    Code Editor. Ex: VS Code. download
+                                    <a href="https://code.visualstudio.com/download" target="_blank">here</a>
+                                </li>
+                                <li>
+                                    Node.js environment, v16 or higher. Download
+                                    <a href="https://nodejs.org/en/download/" target="_blank">here</a>
+                                </li>
+                                <li>
+                                    Truffle Suite installed on your machind
+                                    <a href="https://trufflesuite.com/truffle" target="_blank">See docs</a>
+                                </li>
+                                <li>
+                                    Git control system. Download
+                                    <a href="https://git-scm.com/downloads" target="_blank">here</a>
+                                </li>
+                                <li>
+                                    Ganache Local server. Download
+                                    <a href="https://trufflesuite.com/ganache/" target="_blank">here</a>
+                                </li>
+                                <li>
+                                    MetaMask Crypto Wallet account. Get Matamask extension from
+                                    <a href="https://metamask.io/download/" target="_blank">here</a>
+                                </li>
+                            </ol>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              WEB3 CONFIGS
+                         -----------------------------------------------  -->
+                        <section id="app_configs">
+                            <section id="react_configs">
+                                <h2>Site Identity</h2>
+                                <p class="mb-4">
+                                    In this section we'll change the app identity from ours to yours, such as logo,
+                                    brand name, etc... You'll find all configs related to this section at
+                                    <code>\client\src\helpers\settings.js</code>
+                                </p>
+
+                                <h5>• Change Logo file and width:</h5>
+                                <ul class="text-muted text-sm">
+                                    <li>Place your new logo into <code>\public</code> folder</li>
+                                    <li>
+                                        Place your new favicon into <code>\public</code> folder, give it the name of
+                                        <strong class="fw-bold">favicon</strong> and make its extension
+                                        <strong class="fw-bold">.ico</strong>
+                                    </li>
+                                    <li>
+                                        At <code>\settings.js</code> replace the current logo name with your logo name
+                                        from <code>logo:</code> property
+                                    </li>
+                                    <li>Adjust the <code>logoWidth:</code> property number to fit your new logo</li>
+                                </ul>
+
+                                <h5>• Change Brand Name and Brand Description</h5>
+                                <ul class="text-muted text-sm">
+                                    <li>
+                                        At <code>\settings.js</code> replace the current brand name with your brand name
+                                        from <code>brandName:</code> property
+                                    </li>
+                                    <li>
+                                        Replace the current brand description with your brand description from
+                                        <code>brandDescription:</code> property
+                                    </li>
+                                    <li>These new values will reflects at the meta tags and the page titles</li>
+                                </ul>
+
+                                <h5>• Change Videos available categories</h5>
+                                <ul class="text-muted text-sm">
+                                    <li>
+                                        We have listed few categories to be available for the minters to choose from,
+                                        you can remove or add more categories from <code>genresOptions:</code> array.
+                                    </li>
+                                    <li>
+                                        Follow the same naming convention and array structure while adding new category.
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <hr class="divider" />
+
+                            <h2>Web3 Configuration</h2>
+                            <p class="mb-4">
+                                In this section we'll change the some important configuration to make your site work
+                                properly depending on the network you will choose, all the Web3 Configs will be at
+                                <code>\client\src\helpers\settings.js</code>
+                            </p>
+
+                            <h5>• Edit the Network Configs:</h5>
+                            <p class="text-sm">
+                                These configs related to the network you'll use to deploy your smart contracts
+                            </p>
+
+                            <ul class="text-muted text-sm">
+                                <li>
+                                    Replace the current <strong class="fw-bold">Network Name</strong> with your chosen
+                                    network name from <code>activeNetworkName:</code> property. Any naming convention
+                                    will work, no restriction here.
+                                </li>
+                                <li>
+                                    Change the current <strong class="fw-bold">RPC URL</strong> with your chosen network
+                                    RPC URL from <code>rpcUrl:</code> preperty. Here you must know the exact RPC URL of
+                                    your network, you can find it from here
+                                    <a href="https://chainlist.org">https://chainlist.org</a>
+                                </li>
+                                <li>
+                                    Change the current <strong class="fw-bold">Network ID</strong> with your chosen
+                                    network ID from <code>networkId:</code> preperty. Here you must know the exact Chain
+                                    ID of your network, you can find it from here
+                                    <a href="https://chainlist.org">https://chainlist.org</a>
+                                </li>
+                                <li>
+                                    Change the current <strong class="fw-bold">Block Explorer URL</strong> with your
+                                    chosen network block explorer from <code>blockExplorerUrls:</code> preperty. This
+                                    url will redirect the user to track his transactions on the blockchain you've
+                                    chosen.
+                                </li>
+                                <li>
+                                    Change the current <strong class="fw-bold">Currency</strong> with your chosen
+                                    network native token from <code>currency:</code> preperty. For example: if you're
+                                    deploying your contracts on <strong class="fw-bold">Binance Smart Chain</strong> you
+                                    may change it to <strong class="fw-bold">BNB</strong>
+                                </li>
+                                <li>
+                                    To save the uploaded assets to your own server, as our server will not serve any
+                                    storage for others, change the current <strong class="fw-bold">API URL</strong> with
+                                    your API URL from <code>APIURL:</code> property. You should know how to create a
+                                    custom private URL using Laravel as we mentioned into Laravel Installation section.
+                                </li>
+                            </ul>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              PROFILTS PERCENTAGE
+                         -----------------------------------------------  -->
+                        <section id="profits_percentage">
+                            <h2>Set your Revenue Split from sold videos</h2>
+                            <p>
+                                In order to gain profits from the app, we cut you a percentage on each video sale, you
+                                can change this percentage from <code>\migration\2_deploy_simple_storage.js</code>. From
+                                <code>commission:</code> property you can set your own percetage.
+                            </p>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              SIDEBAR
+                         -----------------------------------------------  -->
+                        <section id="truffle_configs">
+                            <h2>Truffle Configuration</h2>
+                            <p>
+                                In order to be able to deploy your smart contracts, you have to set some Truffle configs
+                                to move forward, all the Truffle will be at <code>/truffle-config.js</code>
+                            </p>
+                            <p>You should see a file looks like this:</p>
+
+                            <div class="header-snippet"></div>
+
+                            <h5>1. Add your MetaMask secret passphrase to deploy with it.</h5>
+                            <pre><code class="hljs js">mnemonic = 'Your MetaMask secret passphrase here'</code></pre>
+
+                            <h5>2. Add your Network details.</h5>
+                            <p>
+                                into the <code>networks</code> object. We've listed some networks in this file, in case
+                                you haven't find yours, just add a new record inside the object. For example, you want
+                                to add Ethereum mainnet
+                            </p>
+                            <pre><code class="hljs js">ethereum: {
+    provider: function () {
+        return new HDWalletProvider(Metamask secret passphrase, 'Ethereum mainnet RPC URL', Metamask Account index, i.e. first account is 0),
+        network_id: // Ethereum mainnnet network ID,
+    }
+},</code></pre>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              REACT INSTALLATION
+                         -----------------------------------------------  -->
+                        <section id="react_installation" class="text-muted">
+                            <h2>Installation For React Part</h2>
+                            <p>
+                                All the following steps will be applied only on the <code>\client</code> directory,
+                                which holding the UI Part [the React.js app].
+                            </p>
+                            <p class="mb-4">
+                                You have too many options to serve our app on a woking server, and since it will be hard
+                                to mention all the available ways, we'll outline some of the servers, and the process
+                                should be the same for the others.
+                            </p>
+
+                            <div class="mb-4">
+                                <h3 class="mb-3">Ex 1: Deploying on Netlify</h3>
+                                <ul>
+                                    <li>
+                                        <h5>Manual Deploy</h5>
+                                        <p>
+                                            To do a manual deploy to Netlify’s CDN, open the terminal into
+                                            <code>\client</code> directory, run the following command:
+                                        </p>
+                                        <pre><code class="hljs sh">npm install netlify-cli -g
+netlify deploy</code></pre>
+                                        <p>Choose <code>build</code> as the path to deploy.</p>
+                                    </li>
+                                    <li>
+                                        <h5>Continuous Delivery</h5>
+                                        <p>
+                                            With this setup Netlify will build and deploy when you push to git or open a
+                                            pull request, so basically, you have to push the client folder to a Github
+                                            repository.
+                                        </p>
+                                        <ol>
+                                            <li>
+                                                <a href="https://app.netlify.com/signup" target="_blank"
+                                                    >Start a new netlify project</a
+                                                >
+                                            </li>
+                                            <li>Pick your Git hosting service and select your repository</li>
+                                            <li>Click <code>Build your site</code></li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <h5>Support for client-side routing:</h5>
+                                        <p>
+                                            To support <code>pushState</code>, make sure to create a
+                                            <code>public/_redirects</code> file with the following rewrite rules:
+                                        </p>
+                                        <pre><code class="hljs sh">/*  /index.html  200</code></pre>
+                                        <p>
+                                            When you build the project, Create React App will place the public folder
+                                            contents into the build output.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-4">
+                                <h3 class="mb-3">Ex 2: Deploying on Digital Ocean</h3>
+                                <ul>
+                                    <li>
+                                        <h5>Step 1 — Pushing the Code to GitHub</h5>
+                                        <p>
+                                            To deploy your app, App Platform retrieves your source code from a hosted
+                                            code repository. In this step, you will push your React app code to a GitHub
+                                            repository so that App Platform can access it later.
+                                        </p>
+                                        <p>
+                                            Log in to your GitHub account. After you log in,
+                                            <a
+                                                href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo"
+                                                target="_blank"
+                                                >create a new repository</a
+                                            >
+                                            called <code>digital-ocean-app</code>. You can make the repository either
+                                            private or public:
+                                        </p>
+                                        <p>
+                                            Create React App automatically initializes your project with git, so you can
+                                            set up to push the code directly to GitHub. First, add the repository that
+                                            you’d like to use with the following command:
+                                        </p>
+                                        <pre><code class="hljs sh">git remote add origin https://github.com/your_name/digital-ocean-app.git</code></pre>
+                                        <p>
+                                            Next, declare that you want to push to the <code>main</code> branch with the
+                                            following:
+                                        </p>
+                                        <pre><code class="hljs bash">git branch -M main</code></pre>
+                                        <p>Finally, push the code to your repository:</p>
+                                        <pre><code class="hljs bash">git push -u origin main</code></pre>
+                                        <p>Enter your GitHub credentials when prompted to push your code.</p>
+                                        <p>
+                                            When you push the code you will receive a success message. Your message will
+                                            be slightly different:
+                                        </p>
+                                        <pre><code class="hljs bash">Output
+Counting objects: 22, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (22/22), 187.50 KiB | 6.94 MiB/s, done.
+Total 22 (delta 0), reused 0 (delta 0)
+To github.com:your_name/digital-ocean-app.git
+   4011c66..647d2e1  main -> main
+                                        </code></pre>
+                                        <p>You’ve now copied your code to the GitHub repository.</p>
+                                        <p>
+                                            In this step, you pushed your project to GitHub so that you can access it
+                                            using DigitalOcean Apps. Next, you’ll create a new DigitalOcean App using
+                                            your project and set up automatic deployment.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h5>Step 2 — Deploying to DigitalOcean App Platform</h5>
+                                        <p>
+                                            In this step, you’ll deploy a React application to the DigitalOcean App
+                                            Platform. You’ll connect your GitHub repository to DigitalOcean, configure
+                                            the project to build, and build your initial project. After the project is
+                                            live, each change will trigger a new build and update.
+                                        </p>
+                                        <p>
+                                            By the end of this step, you’ll be able to deploy an application with
+                                            continous delivery on DigitalOcean.
+                                        </p>
+                                        <p>
+                                            To begin, log in to your DigitalOcean account and press the
+                                            <strong class="fw-bold">Create</strong> button, then select
+                                            <strong class="fw-bold">Apps</strong>:
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/2.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            You’ll next be prompted to link your GitHub repository. If you have not yet
+                                            connected it, you will need to log in with your username and password and
+                                            give DigitalOcean authorization to access your repositories:
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/3.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            Once you link your account, select the repository you’d like to connect on
+                                            the GitHub authorization screen. In this case, you are using the
+                                            <strong class="fw-bold">digital-ocean-app</strong> repository, but you can
+                                            connect more repositories if you would like:
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/4.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            After selecting the repository, you will reconnect to the DigitalOcean
+                                            interface. Select <strong class="fw-bold">digital-ocean-app</strong> from
+                                            the list of repositories, then press <strong class="fw-bold">Next</strong>.
+                                            This will connect your App directly to the GitHub repo:
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/5.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            Now that you have selected your repository, you need to configure the
+                                            DigitalOcean App. In this example, the server will be based in North America
+                                            by choosing <strong class="fw-bold">New York</strong> in the
+                                            <strong class="fw-bold">Region</strong> field, and the deployment branch
+                                            will be <strong class="fw-bold">main</strong>. For your app, choose the
+                                            region that is closest to your physical location:
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/6.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            For this tutorial, you are checking
+                                            <strong class="fw-bold">Autodeploy code changes</strong>. This will
+                                            automatically rebuild your app every time you update the code.
+                                        </p>
+                                        <p>
+                                            Press <strong class="fw-bold">Next</strong> to move on to the Configure your
+                                            app screen.
+                                        </p>
+                                        <p>
+                                            Next, select the type of application you will run. Since React will build
+                                            static assets, select <strong class="fw-bold">Static Site</strong> from the
+                                            dropdown menu in the <strong class="fw-bold">Type</strong> field.
+                                        </p>
+                                        <p>
+                                            You also have the option to use a custom build script. But in this case, you
+                                            can stick with the default <code>npm run build</code> command. You may want
+                                            to create a custom build script if you have a different build script for a
+                                            quality assurance (QA) or a production environment:
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/7.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            Press <strong class="fw-bold">Next</strong> to move on to the
+                                            <strong class="fw-bold">Finalize and launch</strong> page.
+                                        </p>
+                                        <p>
+                                            Here you can select the price plan. The free Starter tier is made for static
+                                            sites, so choose that one:
+                                        </p>
+                                        <p>
+                                            Here you can select the price plan. The free
+                                            <strong class="fw-bold">Starter</strong> tier is made for static sites, so
+                                            choose that one:
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/8.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            Press the <strong class="fw-bold">Launch Starter App</strong> button and
+                                            DigitalOcean will start building your application.
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/9.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            It will take a few minutes for the build to run, but when it is finished,
+                                            you will receive a success message and a link to your new site. Your link
+                                            will have a unique name and will be slightly different:
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/10.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            Press <strong class="fw-bold">Live App</strong> to access your project in
+                                            the browser. It will be the same as the project you tested locally, but this
+                                            will be live on the web with a secure URL:
+                                        </p>
+                                        <p>
+                                            Now that your project is configured, any time you make a change to the
+                                            linked repository, you’ll run a new build. In this case, if you push a
+                                            change to the <strong class="fw-bold">main</strong> branch, DigitalOcean
+                                            will automatically run a new deployment. There is no need to log in; it will
+                                            run as soon as you push the change:
+                                        </p>
+                                        <img
+                                            src="https://assets.digitalocean.com/articles/67589/12.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            In this step, you created a new DigitalOcean app on App Platform. You
+                                            connected your GitHub account and configured the app to build the
+                                            <strong class="fw-bold">main</strong> branch. After configuring the
+                                            application, you learned that the app will deploy a new build after every
+                                            change.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h3 class="mb-3">Ex 3: Deploying on cPanel</h3>
+                                <ul>
+                                    <li>
+                                        <h5>Step 1 — Add the Homepage to your package.json File</h5>
+                                        <p>
+                                            Next, open up our <code>\client</code> folder. Open up your
+                                            <code>package.json</code> file and add a "homepage" attribute like so:
+                                        </p>
+                                        <img
+                                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--h1pJP0gP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/4wqb71tznqilad5rnzma.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            The format should be
+                                            <code>"homepage": "http://yourdomainname.whatever"</code>
+                                        </p>
+                                        <h5>Step 2 — Create the build File</h5>
+                                        <p>
+                                            In your application's root directory, run <code>npm install</code> to
+                                            install the updated dependencies. Once this has finished, the next command
+                                            you'll run is <code>npm run build</code>.
+                                        </p>
+                                        <p>
+                                            You'll notice this creates a new directory in your project called build. The
+                                            build folder is essentially a super-compressed version of your program that
+                                            has everything your browser needs to identify and run your app.
+                                        </p>
+                                        <img
+                                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--Ok3totqu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/5pbbk3zjvjyfftyappd8.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <h5>Step 3 — Connect to cPanel</h5>
+                                        <p>
+                                            Let's head over to your hosting provider (Namecheap, Godaddy, Bluehost
+                                            etc.). Once you've logged in, navigate to the cPanel manager for your
+                                            domain. Typically there is a dropdown menu of some kind that says "Manage"
+                                            which will direct you to cPanel.
+                                        </p>
+                                        <img
+                                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--A6IbB9L2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/b27bb6a500yctbxysc0n.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>Your cPanel manager should look something like this:</p>
+                                        <img
+                                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--c0qzzC3V--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/17kybzgd5q1h6y2jd74x.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            Navigate into the File Manager. There you'll find a dropdown list of
+                                            directories. The one we're interested in is public_html. Open that up.
+                                        </p>
+                                        <img
+                                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--9EIklQlV--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/via84rrhvsi29924si8v.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>Add the Build File Contents to <code> public_html </code></p>
+                                        <p>
+                                            Navigate to the build file in your app's root directory. Open it up and
+                                            select all the contents inside the build file. If you upload the entire
+                                            build file itself, the process will not work.
+                                        </p>
+
+                                        <img
+                                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--uvF6lKdn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/20rta7k83xvk4lqtv9xn.png"
+                                            alt=""
+                                            class="img-fluid tut-img"
+                                        />
+                                        <p>
+                                            Once you've copied all the contents inside the build file, upload them into
+                                            <code>public_html</code>.
+                                        </p>
+                                        <h5>Step 4 — Create and Upload the .htaccess File</h5>
+                                        <p>
+                                            In order for the routes to work in your React app, you need to add a
+                                            <code>.htaccess</code> file. In the <code>public_html</code> folder, at the
+                                            same level as the <code>build</code> file contents, add a new file and name
+                                            it <code>.htaccess</code>.
+                                        </p>
+                                        <p>Edit the file and insert the following boilerplate information:</p>
+                                        <pre><code class="hljs bash">&lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteRule . /index.html [L]
+
+&lt;/IfModule&gt;</code></pre>
+                                        <p>You're Super Done.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              LARAVEL INSTALLATION
+                         -----------------------------------------------  -->
+                        <section id="laravel_installation" class="text-muted">
+                            <h2>Installation For Laravel Part</h2>
+                            <h3>Prerequisites for your Ubuntu server</h3>
+                            <p>
+                                Before you set up our app, you should know to to prepare the Nginx Server before
+                                installing our app, if you dkn't know how to do this, please follow this tutorial
+                                <a
+                                    href="https://www.digitalocean.com/community/tutorials/how-to-deploy-a-laravel-application-with-nginx-on-ubuntu-16-04"
+                                    target="_blank"
+                                >
+                                    https://www.digitalocean.com/community/tutorials/how-to-deploy-a-laravel-application-with-nginx-on-ubuntu-16-04
+                                </a>
+                            </p>
+
+                            <h5>How to setup our app on your Nginx Server:</h5>
+                            <h3>Step 1 — Setting Up the Demo Application</h3>
+
+                            <ul>
+                                <li>
+                                    <p>
+                                        Upload the folder
+                                        <code>\streamlify-backend</code>
+                                        to a Github repository.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        First, create a directory within the Nginx web root which will hold the
+                                        application. Because the demo application is named
+                                        <code>streamlify-backend</code>
+                                        , let’s use
+                                        <code>/var/www/html/streamlify-backend</code>
+                                    </p>
+                                    <pre><code class="hljs php">sudo mkdir -p /var/www/html/streamlify-backend</code></pre>
+                                </li>
+                                <li>
+                                    <p>Move to the new directory and clone the demo application using Git.</p>
+                                    <pre><code class="hljs php">cd /var/www/html/streamlify-backend
+git clone https://github.com/YOUR_USERNAME/streamlify-backend .</code></pre>
+                                </li>
+                                <li>
+                                    <p>
+                                        Git will download all of the files from the demo application repository. You’ll
+                                        see output that looks like this:
+                                    </p>
+                                    <pre><code class="hljs php">Git output
+Cloning into '.'...
+remote: Counting objects: 263, done.
+remote: Total 263 (delta 0), reused 0 (delta 0), pack-reused 263
+Receiving objects: 100% (263/263), 92.75 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (72/72), done.
+Checking connectivity... done.</code></pre>
+                                </li>
+                                <li>
+                                    <p>
+                                        Next, we need to install the project dependencies. Laravel utilizes Composer to
+                                        handle dependency management, which makes it easy to install the necessary
+                                        packages in one go.
+                                    </p>
+                                    <pre><code class="hljs php">composer install</code></pre>
+                                </li>
+                                <li>
+                                    <p>
+                                        The somewhat lengthy output will show the installation progress for all project
+                                        dependencies:
+                                    </p>
+                                    <pre><code class="hljs php">Composer output
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+. . .
+Generating autoload files
+> php artisan clear-compiled
+> php artisan optimize
+Generating optimized class loader
+</code></pre>
+                                </li>
+                                <li>
+                                    <p>
+                                        The app itself is set up, so the next step is configuring the app environment.
+                                        This involves connecting the application and the database and customizing some
+                                        settings for production.
+                                    </p>
+                                </li>
+                            </ul>
+
+                            <h3>Step 2 — Configuring the Application Environment</h3>
+                            <p>
+                                In this step, we’ll modify some security-related application settings, allow the
+                                application to connect to the database, and prepare the database for usage. These are
+                                necessary steps for all LEMP-backed Laravel applications, not just the demo application
+                                we’re using here.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <p>
+                                        Open the Laravel environment configuration file with <code>nano</code> or your
+                                        favorite text editor.
+                                    </p>
+                                    <pre><code class="hljs php">sudo nano /var/www/html/streamlify-backend/.env</code></pre>
+                                </li>
+                                <li>
+                                    <p>
+                                        You’ll need to make the following changes to the file. Make sure to update the
+                                        placeholder variables, like <code>password</code> and <code>example.com</code>,
+                                        with the appropriate values.
+                                    </p>
+                                    <pre><code class="hljs php">APP_ENV=production
+APP_DEBUG=false
+APP_KEY=b809vCwvtawRbsG0BmP1tWgnlXQypSKf
+APP_URL=http://example.com
+
+DB_HOST=127.0.0.1
+DB_DATABASE=laravel
+DB_USERNAME=laraveluser
+DB_PASSWORD=password
+
+. . .</code></pre>
+                                </li>
+                                <li><p>Save the file and exit.</p></li>
+                            </ul>
+                            <p>
+                                Let’s go through these changes in more detail. There are two configuration blocks here;
+                                the first is for application configuration and the second is for database configuration.
+                            </p>
+                            <p>In the application configuration section:</p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        The <code>APP_ENV</code> variable denotes the system environment in which the
+                                        application is run. The default value is <code>local</code> which is used for
+                                        local development environments. For production deployment, it should be changed
+                                        to <code>production</code>, as we’ve done here. Changing this variable controls
+                                        log verbosity, caching settings, and how the errors are displayed (depending on
+                                        the app). With <code>local</code> settings, it’s set up to ease development and
+                                        debugging, which is convenient while working on an app but shouldn’t be used in
+                                        a production setup.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        The <code>APP_DEBUG</code> variable complements <code>APP_ENV</code> and
+                                        explicitly enables or disables debugging information and verbose error display.
+                                        On production setups, this value should be set to <code>false</code> to prevent
+                                        debugging information from being displayed to the users.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        The <code>APP_URL</code> variable specifies the IP address or domain name under
+                                        which the site should be accessible. We used <code>example.com</code> domain
+                                        name here, but you should replace it with your own domain the website should be
+                                        accessed with.
+                                    </p>
+                                </li>
+                            </ul>
+                            <p>The database configuration section is a little more straightforward:</p>
+                            <ul>
+                                <li><code>DB_DATABASE</code> is the name of the database.</li>
+                                <li><code>DB_USERNAME</code> is the name of the MySQL user that the app should use.</li>
+                                <li><code>DB_PASSWORD</code> is the database password for that user.</li>
+                            </ul>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              DEVELOPMENT
+                         -----------------------------------------------  -->
+                        <section id="development">
+                            <h2>Development using Ganach Local Server</h2>
+
+                            <p>
+                                To start developing on your local machine, make sure that you finalized all the
+                                configuration steps, then follow the following steps
+                            </p>
+
+                            <ol class="text-muted">
+                                <li>
+                                    <p>Open your terminal in the root directory and run the following command:</p>
+                                    <pre><code class="hljs bash">npm install -g truffle</code></pre>
+                                </li>
+                                <li>
+                                    <p>Install the root dependencies by running the following command</p>
+                                    <pre><code class="hljs bash">npm install</code></pre>
+                                </li>
+                                <li>
+                                    <p>In your terminal, navigate to the client directory</p>
+                                    <pre><code class="hljs bash">cd client/</code></pre>
+                                </li>
+                                <li>
+                                    <p>Install the React.js Web3 dependencies</p>
+                                    <pre><code class="hljs bash">npm install</code></pre>
+                                </li>
+                                <li>
+                                    <p>Then move to the root directory again</p>
+                                    <pre><code class="hljs bash">cd ..</code></pre>
+                                </li>
+                                <li><p>Open your Ganache local server, make sure it's running.</p></li>
+                                <li>
+                                    <p>Move to <code>\client\src\helpers\settings.js</code> and change the following</p>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                Change <code>activeNetworkName</code> to
+                                                <span class="text-white">Ganache local server</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Change <code>rpcUrl</code> to
+                                                <span class="text-white">http://127.0.0.1:7545</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>Change <code>networkId</code> to <span class="text-white">5777</span></p>
+                                        </li>
+                                        <li>
+                                            <p>Change <code>currency</code> to <span class="text-white">ETH</span></p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Change <code>APIURL</code> to
+                                                <span class="text-white">your own API</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Deploy the smart contracts on the Ganache Server</p>
+                                    <pre><code class="hljs bash">turffle migrate --reset</code></pre>
+                                </li>
+                                <li>
+                                    <p>
+                                        Finally, move to the <code>\client</code> directory start the development server
+                                    </p>
+                                    <pre><code class="hljs bash">cd client
+npm start</code></pre>
+                                </li>
+                            </ol>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              DEPLOYMENT
+                         -----------------------------------------------  -->
+                        <section id="deployment">
+                            <h2>Smart Contracts Deployments</h2>
+                            <p class="mb-4">
+                                To Deploy your smart contracts to a test network or a mainnet, make sure that you've
+                                configed your files correctly as we outlined at
+                                <strong class="fw-bold">App Configuration</strong> section and then follow these steps:
+                            </p>
+                            <ol class="text-muted">
+                                <li>Make sure you've enough funds in your MetaMask account</li>
+                                <li>
+                                    <p>Open your terminal at the root folder and run the following command:</p>
+                                    <pre><code class="hljs bash">truffle migrate --network NETWROK_NAME --reset</code></pre>
+                                    <p>
+                                        The <code>NETWORK_NAME</code> refers to the name of the network you'll deploy
+                                        on, exists at <code>truffle-config.js</code> network object
+                                    </p>
+                                </li>
+                                <li>
+                                    After the command is finished, a new <code>/contracs</code> folder will be generated
+                                    inside <code>\client\src</code> directory, these are the
+                                    <strong class="fw-bold">ABIs</strong> of your contracts. If you've not yet upload
+                                    React part to your server, go with the React installation again to update your
+                                    server with these ABIs.
+                                </li>
+                                <li>You're done!</li>
+                            </ol>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              FAQS
+                         -----------------------------------------------  -->
+                        <section id="faqs">
+                            <h2>FAQ</h2>
+                            <p class="text-4">
+                                A FAQ is a list of frequently asked questions (FAQs) and answers on a particular topic.
+                            </p>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="accordion accordion-alterate arrow-right" id="popularTopics">
+                                        <div class="card">
+                                            <div class="card-header" id="heading1">
+                                                <h5 class="mb-0">
+                                                    <a
+                                                        href="#"
+                                                        class="collapsed"
+                                                        data-toggle="collapse"
+                                                        data-target="#collapse1"
+                                                        aria-expanded="false"
+                                                        aria-controls="collapse1"
+                                                        >What are the technologies used in this app?</a
+                                                    >
+                                                </h5>
+                                            </div>
+                                            <div
+                                                id="collapse1"
+                                                class="collapse"
+                                                aria-labelledby="heading1"
+                                                data-parent="#popularTopics"
+                                            >
+                                                <div class="card-body">
+                                                    We're using some serveral techs in this app, they're:
+                                                    <ul class="text-sm text-muted mb-0">
+                                                        <li>
+                                                            <strong class="fw-bold">React.js</strong> For the Front End
+                                                        </li>
+                                                        <li>
+                                                            <strong class="fw-bold">Web3.js</strong> For connecting the
+                                                            Front End with the Blockchain
+                                                        </li>
+                                                        <li>
+                                                            <strong class="fw-bold">Truffle Suite</strong> as a Web3
+                                                            environment
+                                                        </li>
+                                                        <li>
+                                                            <strong class="fw-bold">Solidity</strong> for Smart
+                                                            Contracts development
+                                                        </li>
+                                                        <li>
+                                                            <strong class="fw-bold">Laravel</strong> For storing assets
+                                                            on the server, alternative way to IPFS
+                                                        </li>
+                                                        <li><strong class="fw-bold">Bootstrap</strong> For styling</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading2">
+                                                <h5 class="mb-0">
+                                                    <a
+                                                        href="#"
+                                                        class="collapsed"
+                                                        data-toggle="collapse"
+                                                        data-target="#collapse2"
+                                                        aria-expanded="false"
+                                                        aria-controls="collapse2"
+                                                    >
+                                                        If I'm new to coding, can I edit everything myself?</a
+                                                    >
+                                                </h5>
+                                            </div>
+                                            <div
+                                                id="collapse2"
+                                                class="collapse"
+                                                aria-labelledby="heading2"
+                                                data-parent="#popularTopics"
+                                            >
+                                                <div class="card-body">
+                                                    The short answers is no, you can hire a developer, or make some
+                                                    effort to understand the techs used to be able to manage.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading3">
+                                                <h5 class="mb-0">
+                                                    <a
+                                                        href="#"
+                                                        class="collapsed"
+                                                        data-toggle="collapse"
+                                                        data-target="#collapse3"
+                                                        aria-expanded="false"
+                                                        aria-controls="collapse3"
+                                                        >How much funds should I have in my account to deploy the smart
+                                                        contracts?</a
+                                                    >
+                                                </h5>
+                                            </div>
+                                            <div
+                                                id="collapse3"
+                                                class="collapse"
+                                                aria-labelledby="heading3"
+                                                data-parent="#popularTopics"
+                                            >
+                                                <div class="card-body">
+                                                    It mostly depends on the blockchain you will deploy at. In most
+                                                    cases you'll be afforded a small amound which may be less than 0.5
+                                                    of the native token.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading4">
+                                                <h5 class="mb-0">
+                                                    <a
+                                                        href="#"
+                                                        class="collapsed"
+                                                        data-toggle="collapse"
+                                                        data-target="#collapse4"
+                                                        aria-expanded="false"
+                                                        aria-controls="collapse4"
+                                                        >Are you'll be available for further customiztions?</a
+                                                    >
+                                                </h5>
+                                            </div>
+                                            <div
+                                                id="collapse4"
+                                                class="collapse"
+                                                aria-labelledby="heading4"
+                                                data-parent="#popularTopics"
+                                            >
+                                                <div class="card-body">
+                                                    Sure do we. We have a very talented team that will be open to any
+                                                    customization depending on the capacity of the work needed.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading5">
+                                                <h5 class="mb-0">
+                                                    <a
+                                                        href="#"
+                                                        class="collapsed"
+                                                        data-toggle="collapse"
+                                                        data-target="#collapse5"
+                                                        aria-expanded="false"
+                                                        aria-controls="collapse5"
+                                                        >What blockchains are supported?</a
+                                                    >
+                                                </h5>
+                                            </div>
+                                            <div
+                                                id="collapse5"
+                                                class="collapse"
+                                                aria-labelledby="heading5"
+                                                data-parent="#popularTopics"
+                                            >
+                                                <div class="card-body">
+                                                    <ul class="mb-0">
+                                                        <li>Ethereum Mainnet</li>
+                                                        <li>Binance Smart Chain</li>
+                                                        <li>Polygon</li>
+                                                        <li>Celo</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading6">
+                                                <h5 class="mb-0">
+                                                    <a
+                                                        href="#"
+                                                        class="collapsed"
+                                                        data-toggle="collapse"
+                                                        data-target="#collapse6"
+                                                        aria-expanded="false"
+                                                        aria-controls="collapse6"
+                                                        >What are the supported Crypto wallets for this app?</a
+                                                    >
+                                                </h5>
+                                            </div>
+                                            <div
+                                                id="collapse6"
+                                                class="collapse"
+                                                aria-labelledby="heading6"
+                                                data-parent="#popularTopics"
+                                            >
+                                                <div class="card-body">At the moment, you can use MetaMask wallet.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              SOURCE & CREDITS
+                         -----------------------------------------------  -->
+                        <section id="source_credits">
+                            <h2>Source & Credits</h2>
+                            <h4>Fonts:</h4>
+                            <ul>
+                                <li>
+                                    Anton Google Font - For Bold Headings
+                                    <a target="_blank" href="https://fonts.google.com/specimen/Anton"
+                                        >https://fonts.google.com/specimen/Anton</a
+                                    >
+                                </li>
+                                <li>
+                                    Libre Franklin Google Font - For normal text
+                                    <a target="_blank" href="https://fonts.google.com/specimen/Libre+Franklin"
+                                        >https://fonts.google.com/specimen/Libre+Franklin</a
+                                    >
+                                </li>
+                                <li>
+                                    Flow Rounded Google Font - For Mocking Components
+                                    <a target="_blank" href="https://fonts.google.com/specimen/Flow+Rounded"
+                                        >https://fonts.google.com/specimen/Flow+Rounded</a
+                                    >
+                                </li>
+                            </ul>
+                            <h4>Scripts:</h4>
+                            <ul>
+                                <li>
+                                    React.js -
+                                    <a target="_blank" href="https://reactjs.org/docs/getting-started.html"
+                                        >https://reactjs.org/docs/getting-started.html</a
+                                    >
+                                </li>
+                                <li>
+                                    Web3.js -
+                                    <a target="_blank" href="https://web3js.readthedocs.io/en/v1.8.1/"
+                                        >https://web3js.readthedocs.io/en/v1.8.1/</a
+                                    >
+                                </li>
+                                <li>
+                                    Truffle Suite -
+                                    <a target="_blank" href="https://trufflesuite.com/">https://trufflesuite.com/</a>
+                                </li>
+                                <li>
+                                    Solidity -
+                                    <a target="_blank" href="https://docs.soliditylang.org/en/v0.8.17/"
+                                        >https://docs.soliditylang.org/en/v0.8.17/</a
+                                    >
+                                </li>
+                                <li>
+                                    Bootstrap 5 -
+                                    <a target="_blank" href="https://getbootstrap.com/">https://getbootstrap.com/</a>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              SUPPORT
+                         -----------------------------------------------  -->
+                        <section id="support">
+                            <h2>Support</h2>
+                            <p>
+                                If this documentation doesn't answer your questions, So, Please send us Email via
+                                <a
+                                    class="btn btn-primary"
+                                    target="_blank"
+                                    href="https://codecanyon.net/user/Web3Monkeys#contact"
+                                    >Item Support Page</a
+                                >
+                            </p>
+                            <p>
+                                We are located in GMT +5:30 time zone and we answer all questions within 12-24 hours in
+                                weekdays. In some rare cases the waiting time can be to 48 hours. (except holiday
+                                seasons which might take longer).
+                            </p>
+                            <div class="alert alert-warning mb-4">
+                                <span class="badge badge-danger text-uppercase">Note:</span> While we aim to provide the
+                                best support possible, please keep in mind that it only extends to verified buyers and
+                                only to issues related to our app like bugs and errors. Custom modifications or third
+                                party module implementations are not included.
+                            </div>
+                            <h4>
+                                Don’t forget to Rate this template <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i>
+                            </h4>
+                            <div class="alert alert-success">
+                                Please Add your Review (Opinion) for Our template. It would be a great support for
+                                us.<br />
+                                Go to your <strong>CodeCanyon Profile</strong> > <strong>Downloads Tab</strong> > & then
+                                You can Rate & Review for our template.<br />
+                                Thank You.
+                            </div>
+                        </section>
+
+                        <hr class="divider" />
+
+                        <!--  ----------------------------------------------- 
+                              CHANGELOG
+                         -----------------------------------------------  -->
+
+                        <section id="changelog">
+                            <h3 id="v1-0">Version 1.0 <small class="text-muted">(1 Jan, 2023)</small></h3>
+                            <p>Initial Release</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- Content end -->
+        </div>
+        <!-- Document Wrapper end -->
+
+        <!-- Back To Top -->
+        <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"
+            ><i class="fa fa-chevron-up"></i
+        ></a>
+
+        <!--  ----------------------------------------------- 
+            JAVASCRIPT FILES
+        -----------------------------------------------  -->
+        <script src="assets/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Highlight JS -->
+        <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+        <!-- Easing -->
+        <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+        <!-- Magnific Popup -->
+        <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <!-- Custom Script -->
+        <script src="assets/js/theme.js"></script>
+        <!-- Custom Script -->
+        <script src="assets/js/snippets.js"></script>
+    </body>
+</html>

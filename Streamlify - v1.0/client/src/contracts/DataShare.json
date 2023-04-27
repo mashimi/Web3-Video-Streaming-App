@@ -1,0 +1,1303 @@
+{
+  "contractName": "DataShare",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/DataShare.sol\":\"DataShare\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/DataShare.sol\":{\"keccak256\":\"0x28039aa552620c7a75c951822b3e4a24d5378073413afabb2765d80583709733\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2c1392ea381c10f935ee452aa1a41e80e7d8db5436f0f761817dac44dfd2fc7e\",\"dweb:/ipfs/QmNhRd7hsqSTTcShMn5gpwDMwHth8hx9HE9Pg7Fw2Rzhmt\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220702419174525cd52076e6c77594daa316fc945bb92b873aaae1ba06084cca38964736f6c63430008110033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220702419174525cd52076e6c77594daa316fc945bb92b873aaae1ba06084cca38964736f6c63430008110033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "67:574:14:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "67:574:14:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.17 <8.10.0;\n\ncontract DataShare{\n    struct Video {\n        uint256 _id;\n        MetaData metData;\n        uint256 _price;\n        address _creator;\n        uint256 _commission;\n        bool approved;\n        uint256 _time;\n    }\n\n    struct MetaData {\n        string name;\n        string description;\n        string category;\n        string genre;\n        string _type;\n        string _url;\n        string preview;\n        string poster;\n        uint256 _duration;\n    }\n\n    struct Activity{\n      address _address;\n      uint256 _id;\n      uint256 _time;\n      string _status;\n    }\n}",
+  "sourcePath": "/home/mhmd-saad/Downloads/Blockchain/movix/contracts/DataShare.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/DataShare.sol",
+    "exportedSymbols": {
+      "DataShare": [
+        3036
+      ]
+    },
+    "id": 3037,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2991,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".17",
+          "<",
+          "8.10",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:33:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "DataShare",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 3036,
+        "linearizedBaseContracts": [
+          3036
+        ],
+        "name": "DataShare",
+        "nameLocation": "76:9:14",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "DataShare.Video",
+            "id": 3007,
+            "members": [
+              {
+                "constant": false,
+                "id": 2993,
+                "mutability": "mutable",
+                "name": "_id",
+                "nameLocation": "122:3:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "114:11:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2992,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2996,
+                "mutability": "mutable",
+                "name": "metData",
+                "nameLocation": "144:7:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "135:16:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_MetaData_$3026_storage_ptr",
+                  "typeString": "struct DataShare.MetaData"
+                },
+                "typeName": {
+                  "id": 2995,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 2994,
+                    "name": "MetaData",
+                    "nameLocations": [
+                      "135:8:14"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 3026,
+                    "src": "135:8:14"
+                  },
+                  "referencedDeclaration": 3026,
+                  "src": "135:8:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_MetaData_$3026_storage_ptr",
+                    "typeString": "struct DataShare.MetaData"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2998,
+                "mutability": "mutable",
+                "name": "_price",
+                "nameLocation": "169:6:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "161:14:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2997,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "161:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3000,
+                "mutability": "mutable",
+                "name": "_creator",
+                "nameLocation": "193:8:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "185:16:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2999,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "185:7:14",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3002,
+                "mutability": "mutable",
+                "name": "_commission",
+                "nameLocation": "219:11:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "211:19:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3001,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "211:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3004,
+                "mutability": "mutable",
+                "name": "approved",
+                "nameLocation": "245:8:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "240:13:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 3003,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "240:4:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3006,
+                "mutability": "mutable",
+                "name": "_time",
+                "nameLocation": "271:5:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "263:13:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3005,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "263:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Video",
+            "nameLocation": "98:5:14",
+            "nodeType": "StructDefinition",
+            "scope": 3036,
+            "src": "91:192:14",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "DataShare.MetaData",
+            "id": 3026,
+            "members": [
+              {
+                "constant": false,
+                "id": 3009,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "322:4:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "315:11:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3008,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "315:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3011,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "343:11:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "336:18:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3010,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "336:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3013,
+                "mutability": "mutable",
+                "name": "category",
+                "nameLocation": "371:8:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "364:15:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3012,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "364:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3015,
+                "mutability": "mutable",
+                "name": "genre",
+                "nameLocation": "396:5:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "389:12:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3014,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "389:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3017,
+                "mutability": "mutable",
+                "name": "_type",
+                "nameLocation": "418:5:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "411:12:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3016,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "411:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3019,
+                "mutability": "mutable",
+                "name": "_url",
+                "nameLocation": "440:4:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "433:11:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3018,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "433:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3021,
+                "mutability": "mutable",
+                "name": "preview",
+                "nameLocation": "461:7:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "454:14:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3020,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "454:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3023,
+                "mutability": "mutable",
+                "name": "poster",
+                "nameLocation": "485:6:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "478:13:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3022,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "478:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3025,
+                "mutability": "mutable",
+                "name": "_duration",
+                "nameLocation": "509:9:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "501:17:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3024,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "501:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "MetaData",
+            "nameLocation": "296:8:14",
+            "nodeType": "StructDefinition",
+            "scope": 3036,
+            "src": "289:236:14",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "DataShare.Activity",
+            "id": 3035,
+            "members": [
+              {
+                "constant": false,
+                "id": 3028,
+                "mutability": "mutable",
+                "name": "_address",
+                "nameLocation": "562:8:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3035,
+                "src": "554:16:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 3027,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "554:7:14",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3030,
+                "mutability": "mutable",
+                "name": "_id",
+                "nameLocation": "586:3:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3035,
+                "src": "578:11:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3029,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "578:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3032,
+                "mutability": "mutable",
+                "name": "_time",
+                "nameLocation": "605:5:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3035,
+                "src": "597:13:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3031,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "597:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3034,
+                "mutability": "mutable",
+                "name": "_status",
+                "nameLocation": "625:7:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3035,
+                "src": "618:14:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3033,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "618:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Activity",
+            "nameLocation": "538:8:14",
+            "nodeType": "StructDefinition",
+            "scope": 3036,
+            "src": "531:108:14",
+            "visibility": "public"
+          }
+        ],
+        "scope": 3037,
+        "src": "67:574:14",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:609:14"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/DataShare.sol",
+    "exportedSymbols": {
+      "DataShare": [
+        3036
+      ]
+    },
+    "id": 3037,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2991,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".17",
+          "<",
+          "8.10",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:33:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "DataShare",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 3036,
+        "linearizedBaseContracts": [
+          3036
+        ],
+        "name": "DataShare",
+        "nameLocation": "76:9:14",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "DataShare.Video",
+            "id": 3007,
+            "members": [
+              {
+                "constant": false,
+                "id": 2993,
+                "mutability": "mutable",
+                "name": "_id",
+                "nameLocation": "122:3:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "114:11:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2992,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2996,
+                "mutability": "mutable",
+                "name": "metData",
+                "nameLocation": "144:7:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "135:16:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_MetaData_$3026_storage_ptr",
+                  "typeString": "struct DataShare.MetaData"
+                },
+                "typeName": {
+                  "id": 2995,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 2994,
+                    "name": "MetaData",
+                    "nameLocations": [
+                      "135:8:14"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 3026,
+                    "src": "135:8:14"
+                  },
+                  "referencedDeclaration": 3026,
+                  "src": "135:8:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_MetaData_$3026_storage_ptr",
+                    "typeString": "struct DataShare.MetaData"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2998,
+                "mutability": "mutable",
+                "name": "_price",
+                "nameLocation": "169:6:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "161:14:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2997,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "161:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3000,
+                "mutability": "mutable",
+                "name": "_creator",
+                "nameLocation": "193:8:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "185:16:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2999,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "185:7:14",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3002,
+                "mutability": "mutable",
+                "name": "_commission",
+                "nameLocation": "219:11:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "211:19:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3001,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "211:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3004,
+                "mutability": "mutable",
+                "name": "approved",
+                "nameLocation": "245:8:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "240:13:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 3003,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "240:4:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3006,
+                "mutability": "mutable",
+                "name": "_time",
+                "nameLocation": "271:5:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3007,
+                "src": "263:13:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3005,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "263:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Video",
+            "nameLocation": "98:5:14",
+            "nodeType": "StructDefinition",
+            "scope": 3036,
+            "src": "91:192:14",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "DataShare.MetaData",
+            "id": 3026,
+            "members": [
+              {
+                "constant": false,
+                "id": 3009,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "322:4:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "315:11:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3008,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "315:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3011,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "343:11:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "336:18:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3010,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "336:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3013,
+                "mutability": "mutable",
+                "name": "category",
+                "nameLocation": "371:8:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "364:15:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3012,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "364:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3015,
+                "mutability": "mutable",
+                "name": "genre",
+                "nameLocation": "396:5:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "389:12:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3014,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "389:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3017,
+                "mutability": "mutable",
+                "name": "_type",
+                "nameLocation": "418:5:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "411:12:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3016,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "411:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3019,
+                "mutability": "mutable",
+                "name": "_url",
+                "nameLocation": "440:4:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "433:11:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3018,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "433:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3021,
+                "mutability": "mutable",
+                "name": "preview",
+                "nameLocation": "461:7:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "454:14:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3020,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "454:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3023,
+                "mutability": "mutable",
+                "name": "poster",
+                "nameLocation": "485:6:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "478:13:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3022,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "478:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3025,
+                "mutability": "mutable",
+                "name": "_duration",
+                "nameLocation": "509:9:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3026,
+                "src": "501:17:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3024,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "501:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "MetaData",
+            "nameLocation": "296:8:14",
+            "nodeType": "StructDefinition",
+            "scope": 3036,
+            "src": "289:236:14",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "DataShare.Activity",
+            "id": 3035,
+            "members": [
+              {
+                "constant": false,
+                "id": 3028,
+                "mutability": "mutable",
+                "name": "_address",
+                "nameLocation": "562:8:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3035,
+                "src": "554:16:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 3027,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "554:7:14",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3030,
+                "mutability": "mutable",
+                "name": "_id",
+                "nameLocation": "586:3:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3035,
+                "src": "578:11:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3029,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "578:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3032,
+                "mutability": "mutable",
+                "name": "_time",
+                "nameLocation": "605:5:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3035,
+                "src": "597:13:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3031,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "597:7:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3034,
+                "mutability": "mutable",
+                "name": "_status",
+                "nameLocation": "625:7:14",
+                "nodeType": "VariableDeclaration",
+                "scope": 3035,
+                "src": "618:14:14",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3033,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "618:6:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Activity",
+            "nameLocation": "538:8:14",
+            "nodeType": "StructDefinition",
+            "scope": 3036,
+            "src": "531:108:14",
+            "visibility": "public"
+          }
+        ],
+        "scope": 3037,
+        "src": "67:574:14",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:609:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2023-01-03T12:36:11.604Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

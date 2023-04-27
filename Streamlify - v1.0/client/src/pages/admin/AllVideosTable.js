@@ -1,0 +1,196 @@
+import React from 'react';
+import { AiFillVideoCamera } from 'react-icons/ai';
+import DataTable, { createTheme } from 'react-data-table-component';
+import { configEtherScanUrl, formatDate, truncate, truncateStart } from '../../helpers/utils';
+import { Jazzicon } from '@ukstv/jazzicon-react';
+import { appSettings } from '../../helpers/settings';
+import { BsCircleFill } from 'react-icons/bs';
+import useVideos from '../../hooks/useVideos';
+import useWeb3 from '../../hooks/useWeb3';
+import { Link } from 'react-router-dom';
+
+createTheme(
+    'solarized',
+    {
+        background: {
+            default: '#1c1c22',
+        },
+    },
+    'dark'
+);
+
+function AllVideosTable({ setIds }) {
+    const { blockchainVideos } = useVideos();
+    const { account, username, networkId } = useWeb3();
+
+    /*** =============================================== */
+    //      PERIODS TABLE COLUMNS
+    /*** =============================================== */
+    const columns = [
+        {
+            name: 'Video',
+            selector: (row) => row?.metadata?.title,
+            sortable: true,
+            minWidth: '300px',
+            cell: (row) => (
+                <div row={row}>
+                    <Link className='text-reset' to={`/videos/${row.id}`}>
+                        <div className='d-flex align-items-center'>
+                            <div
+                                className='flex-shrink-0'
+                                style={{
+                                    width: '40px',
+                                    height: '40px',
+                                    background: `url(${row?.metadata?.poster})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center center',
+                                    borderRadius: '0.5rem',
+                                }}
+                            ></div>
+                            <div className='ms-3'>
+                                <h6 className='mb-1'>{row?.metadata?.title}</h6>
+                                <p className='text-muted small mb-0'>
+                                    {truncateStart(row?.metadata?.description, 30, '...')}
+                                </p>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            ),
+        },
+        {
+            name: 'Creator',
+            minWidth: '200px',
+            selector: (row) => row?.creator,
+            cell: (row) => (
+                <div row={row}>
+                    <a
+                        href={configEtherScanUrl(networkId, row?.creator)}
+                        rel='noopener noreferrer'
+                        className='text-reset'
+                        target='_blank'
+                    >
+                        <div className='d-flex align-items-center'>
+                            <div className='avatar avatar-md2'>
+                                <div style={{ width: '30px', height: '30px' }}>
+                                    <Jazzicon address={row?.creator || ''} />
+                                </div>
+                            </div>
+                            <div className='ms-3'>
+                                <h6 className='mb-1' style={{ fontSize: '0.9rem' }}>
+                                    {row?.creator !== account ? row?.userGenName : username}
+                                </h6>
+                                <p className='text-muted small mb-0'>{truncate(row?.creator, 15, '.....')}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            ),
+        },
+        {
+            name: 'Created At',
+            minWidth: '200px',
+            selector: (row) => row?.createdAt,
+            cell: (row) => (
+                <div row={row}>
+                    <small>{formatDate(row.createdAt)}</small>
+                </div>
+            ),
+        },
+        {
+            name: 'Price',
+            selector: (row) => row?.price,
+            cell: (row) => (
+                <div row={row}>
+                    <small>
+                        {row?.price} {appSettings.currency}
+                    </small>
+                </div>
+            ),
+        },
+        {
+            name: 'Duration',
+            selector: (row) => row?.price,
+            cell: (row) => (
+                <div row={row}>
+                    <small>{row?.metadata?.duration}</small>
+                </div>
+            ),
+        },
+        {
+            name: 'Status',
+            selector: (row) => row?.id,
+            cell: (row) => (
+                <div row={row}>
+                    <small>
+                        {row?.approved ? (
+                            <div className='status status-success'>
+                                <BsCircleFill className='me-2' size='0.4rem' />
+                                <span>Active</span>
+                            </div>
+                        ) : (
+                            <div className='status status-warning'>
+                                <BsCircleFill className='me-2' size='0.4rem' />
+                                <span>Pending</span>
+                            </div>
+                        )}
+                    </small>
+                </div>
+            ),
+        },
+        {
+            name: 'Action',
+            minWidth: '140px',
+            selector: (row) => row?.id,
+            cell: (row) => (
+                <div row={row}>
+                    <div className='form-check'>
+                        <input
+                            type='checkbox'
+                            id={`video_${row?.id}`}
+                            className='form-check-input'
+                            onChange={(e) =>
+                                e.target.checked
+                                    ? setIds((prev) => [...prev, Number(row.id)])
+                                    : setIds((prev) => prev.filter((id) => id !== Number(row.id)))
+                            }
+                        />
+                        <label htmlFor={`video_${row?.id}`} className='form-check-label'>
+                            Select
+                        </label>
+                    </div>
+                </div>
+            ),
+        },
+    ];
+
+    return (
+        <div className='card shadow-lg' data-aos='fade-up' data-aos-delay='200'>
+            <div className='card-body p-lg-5'>
+                <div className='d-flex a;ign-items-center mb-5'>
+                    <div className='stats-icon solid-cyan'>
+                        <AiFillVideoCamera size='1.4rem' />
+                    </div>
+                    <div className='ms-3'>
+                        <h2 className='mb-0 h4'>All Videos List</h2>
+                        <p className='text-muted fw-normal mb-0'>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+
+                <DataTable
+                    columns={columns}
+                    data={blockchainVideos.sort((a, b) => {
+                        return new Date(b.createdAt) - new Date(a.createdAt);
+                    })}
+                    pagination={blockchainVideos.length >= 1 && true}
+                    responsive
+                    theme='solarized'
+                />
+            </div>
+        </div>
+    );
+}
+
+export default AllVideosTable;
